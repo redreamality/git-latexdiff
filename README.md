@@ -17,10 +17,12 @@ For example:
 
 # requirements
 Requires the following on your path (so that you can call them from the commmand line):
+
 these 3 should come along with Miktex:
 - pdflatex
 - latexdiff
 - latexpand (available on CTAN)
+
 and:
 - perl(active perl is only 20MB in case you are wondering which to install)
 
