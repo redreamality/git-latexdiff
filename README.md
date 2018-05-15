@@ -1,5 +1,5 @@
 # git-latexdiff
-To diff latex file with preview versions.
+To diff latex file with preview versions for **Windows**.
 Extremely useful when others revised your paper/work and you need to find the difference.
 works only on windows
 
@@ -9,10 +9,12 @@ Remember to commit everything before you run the script, the author is not respo
 
 # Usage
 
+First, copy `git-latexdiff.bat` to your current latex directory. (**important**)
+
+Then open cmd and execute
 `git-latexdiff [old_revision] [latex_file|no extension] [newest_version]`
 
 For example:
-
 `git-latexdiff HEAD~1 main master`
 
 # requirements
