@@ -3,6 +3,8 @@ To diff latex file with preview versions for **Windows**.
 Extremely useful when others revised your paper/work and you need to find the difference.
 works only on windows
 
+# Effect
+![](https://vgy.me/oQWBFo.png)
 
 # CAUTION
 Remember to commit everything before you run the script, the author is not responsible for any data loss.
