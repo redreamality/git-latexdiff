@@ -57,29 +57,30 @@ latexpand %2.tex -o temp_%2.tex
 move temp_%2.tex %TEMP%\cleandiff\PREV.tex
 
 ::go back to master
-cd %HERE%
+cd /d %HERE%
 git checkout -f %3
 
 ::move the cleandiff and run latexdiff
-cd %TEMP%\cleandiff
+cd /d %TEMP%\cleandiff
 latexdiff PREV.tex HEAD.tex > diff.tex
 latexdiff PREV.bbl HEAD.bbl --append-textcmd="bibinfo",  > diff.bbl
 copy diff.tex %HERE%\diff.tex
+copy diff.bbl %HERE%\diff.bbl
 
 ::generate pdf at %HERE% because the environment(sty/bst) needed
-cd %HERE%
+cd /d %HERE%
 pdflatex -interaction=batchmode --output-directory=%TEMP%\cleandiff diff
 pdflatex -interaction=batchmode --output-directory=%TEMP%\cleandiff diff
 
 
 ::move pdf back up
-cd %TEMP%\cleandiff
+cd /d %TEMP%\cleandiff
 copy diff.pdf %HERE%\diff.pdf
 ::cleanup
 del /F /Q *.*
 
 ::now restore backup
-cd %TEMP%\backup
+cd /d %TEMP%\backup
 copy *.lof %HERE%\*.lof
 copy *.lot %HERE%\*.lot
 copy *.toc %HERE%\*.lof
@@ -94,8 +95,9 @@ copy *.tex %HERE%\*.tex
 copy *.bib %HERE%\*.bib
 ::and clean
 del /F /Q *.*
-cd %TEMP%
+cd /d %TEMP%
 rmdir cleandiff
 rmdir backup
-cd %HERE%
+cd /d %HERE%
 del diff.tex
+del diff.bbl
