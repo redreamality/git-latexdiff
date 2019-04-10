@@ -61,10 +61,13 @@ cd /d %HERE%
 git checkout -f %3
 
 ::move the cleandiff and run latexdiff
-cd /d  %TEMP%\cleandiff
+
+cd /d %TEMP%\cleandiff
+
 latexdiff PREV.tex HEAD.tex > diff.tex
 latexdiff PREV.bbl HEAD.bbl --append-textcmd="bibinfo",  > diff.bbl
 copy diff.tex %HERE%\diff.tex
+copy diff.bbl %HERE%\diff.bbl
 
 ::generate pdf at %HERE% because the environment(sty/bst) needed
 cd /d %HERE%
@@ -99,3 +102,4 @@ rmdir cleandiff
 rmdir backup
 cd /d %HERE%
 del diff.tex
+del diff.bbl
