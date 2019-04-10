@@ -61,7 +61,9 @@ cd /d %HERE%
 git checkout -f %3
 
 ::move the cleandiff and run latexdiff
+
 cd /d %TEMP%\cleandiff
+
 latexdiff PREV.tex HEAD.tex > diff.tex
 latexdiff PREV.bbl HEAD.bbl --append-textcmd="bibinfo",  > diff.bbl
 copy diff.tex %HERE%\diff.tex
