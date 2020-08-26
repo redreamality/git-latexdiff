@@ -63,8 +63,9 @@ git checkout -f %3
 ::move the cleandiff and run latexdiff
 
 cd /d %TEMP%\cleandiff
-
-latexdiff PREV.tex HEAD.tex > diff.tex
+::latexdiff commands, can change into other options with -t: UNDERLINE CTRADITIONAL CFONT
+::latexdiff -t UNDERLINE PREV.tex HEAD.tex > diff.tex
+latexdiff -t CTRADITIONAL PREV.tex HEAD.tex > diff.tex
 latexdiff PREV.bbl HEAD.bbl --append-textcmd="bibinfo",  > diff.bbl
 copy diff.tex %HERE%\diff.tex
 copy diff.bbl %HERE%\diff.bbl

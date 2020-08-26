@@ -1,9 +1,14 @@
 # git-latexdiff
-To diff latex file with preview versions for **Windows**.
+An small and elegant script that compare two latex files with preview versions for **Windows**.
 Extremely useful when others revised your paper/work and you need to find the difference.
-works only on windows
+works only on windows.
 
-# Effect
+# Updates
+
+Changes the default 
+![](https://i.vgy.me/ReLKRJ.png)
+
+# Old Effect (strike through seems not working currently)
 ![](https://vgy.me/oQWBFo.png)
 
 # CAUTION
